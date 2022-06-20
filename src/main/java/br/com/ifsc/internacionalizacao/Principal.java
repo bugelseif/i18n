@@ -42,7 +42,7 @@ public class Principal {
 //            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
 //        }
 //        System.out.println(traducoes.getString("cad_cliente_nome"));
-        Google g = new Google(traducoes);
+        Dicionario g = new Dicionario(traducoes);
 //        Resultado g = new Resultado(traducoes);
 
         g.setVisible(true);
