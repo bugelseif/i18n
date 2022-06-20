@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 public class Google extends javax.swing.JFrame {
 
     public ResourceBundle traducao;
+    public String resultado;
 
 
     public Google(ResourceBundle traducoes) {
@@ -20,7 +21,7 @@ public class Google extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        input_pesquisa = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         bt_pesquisa = new javax.swing.JButton();
         bt_sorte = new javax.swing.JButton();
@@ -31,6 +32,7 @@ public class Google extends javax.swing.JFrame {
         jLabel2.setText("Google");
 
         bt_pesquisa.setText("Pesquisa");
+        bt_pesquisa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bt_pesquisa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_pesquisaMouseClicked(evt);
@@ -38,6 +40,7 @@ public class Google extends javax.swing.JFrame {
         });
 
         bt_sorte.setText("Estou com Sorte");
+        bt_sorte.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bt_sorte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_sorteActionPerformed(evt);
@@ -50,7 +53,7 @@ public class Google extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(input_pesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
             .addGroup(layout.createSequentialGroup()
                 .addGap(136, 136, 136)
@@ -69,7 +72,7 @@ public class Google extends javax.swing.JFrame {
                 .addContainerGap(89, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(input_pesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_pesquisa)
@@ -81,12 +84,14 @@ public class Google extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_sorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sorteActionPerformed
-        Resultado r = new Resultado(traducao);
+        resultado = input_pesquisa.getText();
+        Resultado r = new Resultado(traducao, resultado);
         r.setVisible(true);
     }//GEN-LAST:event_bt_sorteActionPerformed
 
     private void bt_pesquisaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_pesquisaMouseClicked
-        Resultado r = new Resultado(traducao);
+        resultado = input_pesquisa.getText();
+        Resultado r = new Resultado(traducao, resultado);
         r.setVisible(true);
     }//GEN-LAST:event_bt_pesquisaMouseClicked
 
@@ -95,7 +100,7 @@ public class Google extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_pesquisa;
     private javax.swing.JButton bt_sorte;
+    private javax.swing.JTextField input_pesquisa;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

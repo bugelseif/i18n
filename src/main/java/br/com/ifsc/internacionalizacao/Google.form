@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="344" max="-2" attributes="0"/>
+              <Component id="input_pesquisa" min="-2" pref="344" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -48,7 +48,7 @@
               <EmptySpace pref="89" max="32767" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <Component id="input_pesquisa" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bt_pesquisa" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -60,7 +60,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="input_pesquisa">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -73,6 +73,7 @@
     <Component class="javax.swing.JButton" name="bt_pesquisa">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pesquisa"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bt_pesquisaMouseClicked"/>
@@ -81,6 +82,7 @@
     <Component class="javax.swing.JButton" name="bt_sorte">
       <Properties>
         <Property name="text" type="java.lang.String" value="Estou com Sorte"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_sorteActionPerformed"/>
